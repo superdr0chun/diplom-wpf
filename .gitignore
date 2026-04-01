@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build результаты
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+packages/
+*.nupkg
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Test
+[Tt]est[Rr]esult*/
