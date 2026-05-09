@@ -40,8 +40,11 @@ WPF-клиент для системы тестирования. Подключ�
 Перед запуском клиента должен быть запущен Django-сервер (см. репозиторий [diplom-django](https://github.com/superdr0chun/diplom-django)).
 
 ### Шаг 2. Клонирование
+
+```bash
 git clone https://github.com/superdr0chun/diplom-wpf.git
 cd diplom-wpf
+```
 
 ### Шаг 3. Открытие проекта
 
@@ -54,6 +57,8 @@ cd diplom-wpf
 По умолчанию приложение подключается к серверу `http://127.0.0.1:8000/api`. Адрес можно изменить в `Services/AuthService.cs` (`BaseUrl`).
 
 ## Структура проекта
+
+```
 DjangoWPFClient/
 ├── Models/
 │   └── UserSession.cs          — данные текущего пользователя
@@ -74,6 +79,7 @@ DjangoWPFClient/
 │   └── ResultDetailWindow.xaml — разбор ответов
 ├── App.xaml                    — стили и ресурсы
 └── MainWindow.xaml             — стартовое окно
+```
 
 ## Возможные проблемы
 
