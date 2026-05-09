@@ -1,0 +1,76 @@
+<Window x:Class="DjangoWPFClient.Views.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Результат теста" Height="560" Width="500"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="{DynamicResource Bg}">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="380">
+
+            <TextBlock x:Name="ResultEmoji" FontSize="56"
+                       HorizontalAlignment="Center" Margin="0,0,0,8"/>
+
+            <TextBlock x:Name="TestTitleText" FontSize="13"
+                       Foreground="{DynamicResource TextMuted}"
+                       HorizontalAlignment="Center" Margin="0,0,0,4"
+                       TextWrapping="Wrap" TextAlignment="Center"/>
+
+            <TextBlock Text="Тест завершён" FontSize="20" FontWeight="Bold"
+                       Foreground="{DynamicResource TextStrong}"
+                       HorizontalAlignment="Center" Margin="0,0,0,24"/>
+
+            <Border Background="{DynamicResource Surface}"
+                    BorderBrush="{DynamicResource Border}" BorderThickness="1"
+                    CornerRadius="12" Padding="28" Margin="0,0,0,16">
+                <StackPanel>
+
+                    <Grid Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock x:Name="ScoreText" FontSize="32" FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       Foreground="{DynamicResource TextStrong}"/>
+                            <TextBlock Text="Баллов" FontSize="11"
+                                       Foreground="{DynamicResource TextMuted}"
+                                       HorizontalAlignment="Center" Margin="0,2,0,0"
+                                       TextOptions.TextRenderingMode="ClearType"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                            <TextBlock x:Name="PercentText" FontSize="32" FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       Foreground="{DynamicResource Primary}"/>
+                            <TextBlock Text="Процент" FontSize="11"
+                                       Foreground="{DynamicResource TextMuted}"
+                                       HorizontalAlignment="Center" Margin="0,2,0,0"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Border Background="{DynamicResource Border}" Height="1" Margin="0,0,0,20"/>
+
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Оценка" FontSize="11"
+                                   Foreground="{DynamicResource TextMuted}"
+                                   HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                        <Border x:Name="GradeBorder" CornerRadius="40" Width="72" Height="72">
+                            <TextBlock x:Name="GradeText" FontSize="32" FontWeight="Bold"
+                                       Foreground="White" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+
+            <Button Content="Вернуться к тестам" Height="42"
+                    Style="{StaticResource BtnPrimary}"
+                    Margin="0,0,0,8" Click="BackToTests_Click"/>
+
+            <Button Content="Выйти из системы" Height="38"
+                    Style="{StaticResource BtnSecondary}"
+                    Click="Logout_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
