@@ -179,7 +179,7 @@ private void SearchBox_TextChanged(object sender, System.Windows.Controls.TextCh
 
 private void UpdateThemeButton()
 {
-    ThemeButton.Content = Services.ThemeManager.CurrentTheme == "Dark" ? "☀️" : "🌙";
+    ThemeButton.Content = Services.ThemeManager.CurrentTheme == "Dark" ? "Светлая" : "Тёмная";
 }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 {

@@ -69,7 +69,7 @@ namespace DjangoWPFClient
 
 private void UpdateThemeButton()
 {
-    ThemeButton.Content = Services.ThemeManager.CurrentTheme == "Dark" ? "☀️" : "🌙";
+    ThemeButton.Content = Services.ThemeManager.CurrentTheme == "Dark" ? "Светлая" : "Тёмная";
 }
 
         private void UpdateUIForLoggedInUser()

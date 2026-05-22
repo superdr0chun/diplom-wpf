@@ -71,17 +71,17 @@ private Border BuildQuestionCard(ResultAnswerDetail ans, int number)
     if (ans.IsCorrect == true)
     {
         statusBrush = success;
-        statusText = "✓ Правильно";
+        statusText = "Правильно";
     }
     else if (ans.IsCorrect == false)
     {
         statusBrush = danger;
-        statusText = "✗ Ошибка";
+        statusText = "Ошибка";
     }
     else
     {
         statusBrush = warning;
-        statusText = "⏳ Ожидает проверки";
+        statusText = "Ожидает проверки";
     }
 
     var outerBorder = new Border
@@ -159,21 +159,21 @@ private Border BuildQuestionCard(ResultAnswerDetail ans, int number)
 
             if (wasSelected && a.IsCorrect)
             {
-                icon = "✓";
+                icon = "+";
                 rowBg = new SolidColorBrush(Color.FromArgb(40, success.Color.R, success.Color.G, success.Color.B));
                 rowBorder = success;
                 textColor = textStrong;
             }
             else if (wasSelected && !a.IsCorrect)
             {
-                icon = "✗";
+                icon = "x";
                 rowBg = new SolidColorBrush(Color.FromArgb(40, danger.Color.R, danger.Color.G, danger.Color.B));
                 rowBorder = danger;
                 textColor = textStrong;
             }
             else if (!wasSelected && a.IsCorrect)
             {
-                icon = "→";
+                icon = "->";
                 rowBg = new SolidColorBrush(Color.FromArgb(40, warning.Color.R, warning.Color.G, warning.Color.B));
                 rowBorder = warning;
                 textColor = textStrong;
@@ -219,7 +219,7 @@ private Border BuildQuestionCard(ResultAnswerDetail ans, int number)
 
         var legend = new TextBlock
         {
-            Text = "✓ — выбрано и правильно   ✗ — выбрано и неправильно   → — правильный, не выбран",
+            Text = "+ — выбрано и правильно   x — выбрано и неправильно   -> — правильный, не выбран",
             FontSize = 11,
             Foreground = textMuted,
             Margin = new Thickness(0, 8, 0, 0),

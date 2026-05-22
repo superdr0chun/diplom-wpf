@@ -6,7 +6,7 @@
         Background="{DynamicResource Bg}">
     <Grid>
         <!-- Кнопка темы в углу -->
-        <Button Content="🌙" Width="36" Height="36" FontSize="14"
+        <Button Content="Тема" Width="36" Height="36" FontSize="14"
                 HorizontalAlignment="Right" VerticalAlignment="Top"
                 Margin="0,16,16,0"
                 Background="{DynamicResource Surface}"

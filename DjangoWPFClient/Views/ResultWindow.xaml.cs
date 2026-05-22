@@ -24,19 +24,15 @@ namespace DjangoWPFClient.Views
     switch (result.Grade)
     {
         case 5:
-            ResultEmoji.Text = "🎉";
             GradeBorder.Background = success;
             break;
         case 4:
-            ResultEmoji.Text = "👍";
             GradeBorder.Background = primary;
             break;
         case 3:
-            ResultEmoji.Text = "😐";
             GradeBorder.Background = warning;
             break;
         default:
-            ResultEmoji.Text = "😔";
             GradeBorder.Background = danger;
             break;
     }
